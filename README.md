@@ -16,6 +16,7 @@ All API using [pavlok.readme.io](https://pavlok.readme.io).
 
 - Clone this project
 - Run `flutter pub get`
+- Run `flutter gen-l10n` to generate localization files
 - Run `flutter pub run build_runner build --delete-conflicting-outputs` to generate freezes files
 - Run `flutter run --flavor sandbox -t lib/main.dart --dart-define-from-file .env.sandbox.json` for **sandbox**
 - Run `flutter run --flavor staging -t lib/main.dart --dart-define-from-file .env.staging.json` for **staging**

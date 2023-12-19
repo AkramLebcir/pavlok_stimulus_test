@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:pavlok_stimulus_test/core/app_route.dart';
+import 'package:pavlok_stimulus_test/core/core.dart';
+import 'package:pavlok_stimulus_test/utils/utils.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -27,20 +29,28 @@ class MyApp extends StatelessWidget {
 
           return Builder(
             builder: (context) => MaterialApp.router(
-              routerConfig: AppRoute.router,
-              debugShowCheckedModeBanner: false,
-              builder: (BuildContext context, Widget? child) {
-                final MediaQueryData data = MediaQuery.of(context);
+                routerConfig: AppRoute.router,
+                localizationsDelegates: const [
+                  Strings.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                ],
+                debugShowCheckedModeBanner: false,
+                builder: (BuildContext context, Widget? child) {
+                  final MediaQueryData data = MediaQuery.of(context);
 
-                return MediaQuery(
-                  data: data.copyWith(
-                    textScaleFactor: 1,
-                    alwaysUse24HourFormat: true,
-                  ),
-                  child: child!,
-                );
-              },
-              title: "app"
+                  return MediaQuery(
+                    data: data.copyWith(
+                      textScaleFactor: 1,
+                      alwaysUse24HourFormat: true,
+                    ),
+                    child: child!,
+                  );
+                },
+              title: Constants.get.appName,
+              locale: const Locale("en"),
+              supportedLocales: L10n.all,
             ),
           );
         },

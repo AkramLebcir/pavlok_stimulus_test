@@ -5,6 +5,9 @@ import 'package:go_router/go_router.dart';
 enum Routes {
   root("/"),
   splashScreen("/splashscreen"),
+
+  /// Home Page
+  dashboard("/dashboard"),
   ;
 
   const Routes(this.path);
@@ -25,6 +28,11 @@ class AppRoute {
         path: Routes.splashScreen.path,
         name: Routes.splashScreen.name,
         builder: (_, __) => Container(),
+      ),
+      GoRoute(
+        path: Routes.root.path,
+        name: Routes.root.name,
+        redirect: (_, __) => Routes.dashboard.path,
       ),
     ],
     initialLocation: Routes.splashScreen.path,
