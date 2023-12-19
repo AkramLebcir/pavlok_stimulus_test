@@ -9,5 +9,5 @@ void main() async {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ],
-  ).then((_) => runApp(MyApp()));
+  ).then((_) => runApp(const MyApp()));
 }

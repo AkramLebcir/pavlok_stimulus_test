@@ -7,6 +7,8 @@ import 'package:pavlok_stimulus_test/core/core.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
