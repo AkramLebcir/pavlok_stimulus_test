@@ -96,4 +96,7 @@ class StringsEn extends Strings {
 
   @override
   String get createStimulus => 'Create';
+
+  @override
+  String get askForgetYourPassword => 'Forget your password?';
 }

@@ -29,5 +29,6 @@
   "createStimulusTitle": "Créer un stimulus",
   "selectType": "Choisissez le type",
   "selectValue": "Choisissez la valeur",
-  "createStimulus": "Créer"
+  "createStimulus": "Créer",
+  "askForgetYourPassword": "Mot de passe oublié?"
 }

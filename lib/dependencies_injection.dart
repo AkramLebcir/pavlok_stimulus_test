@@ -1,5 +1,8 @@
-import 'package:pavlok_stimulus_test/utils/utils.dart';
 import 'package:get_it/get_it.dart';
+import 'package:pavlok_stimulus_test/utils/utils.dart';
+
+import 'core/core.dart';
+import 'features/auth/auth.dart';
 
 GetIt sl = GetIt.instance;
 
@@ -12,6 +15,7 @@ Future<void> serviceLocator({
   if (isUnitTest) {
     await sl.reset();
   }
+  sl.registerSingleton<DioClient>(DioClient(isUnitTest: isUnitTest));
   _dataSources();
   _repositories();
   _useCase();
@@ -35,20 +39,26 @@ Future<void> _initHiveBoxes({
 
 /// Register repositories
 void _repositories() {
-
+  sl.registerLazySingleton<AuthRepository>(
+    () => AuthRepositoryImpl(sl(), sl()),
+  );
 }
 
 /// Register dataSources
 void _dataSources() {
-
+  sl.registerLazySingleton<AuthRemoteDatasource>(
+    () => AuthRemoteDatasourceImpl(sl()),
+  );
 }
 
 void _useCase() {
-
+  /// Auth
+  sl.registerLazySingleton(() => PostLogin(sl()));
 }
 
 void _cubit() {
-
+  /// Auth
+  sl.registerFactory(() => AuthCubit(sl()));
 }
 
 void _bloc(){

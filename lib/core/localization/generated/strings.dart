@@ -278,6 +278,12 @@ abstract class Strings {
   /// In en, this message translates to:
   /// **'Create'**
   String get createStimulus;
+
+  /// No description provided for @askForgetYourPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forget your password?'**
+  String get askForgetYourPassword;
 }
 
 class _StringsDelegate extends LocalizationsDelegate<Strings> {
