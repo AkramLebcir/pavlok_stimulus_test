@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:pavlok_stimulus_test/core/core.dart';
+import 'package:pavlok_stimulus_test/dependencies_injection.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
+
+import 'features/auth/auth.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,21 +21,25 @@ class MyApp extends StatelessWidget {
       ),
     );
 
-    return OKToast(
-      child: ScreenUtilInit(
-        /// Set screen size to make responsive
-        /// Almost all device
+    log.d(const String.fromEnvironment('ENV'));
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => sl<AuthCubit>()),
+      ],
+      child: OKToast(
+        child: ScreenUtilInit(
+          /// Set screen size to make responsive
+          /// Almost all device
 
-        designSize: const Size(375, 667),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (context, __) {
-          /// Pass context to appRoute
-          AppRoute.setStream(context);
+          designSize: const Size(375, 667),
+          minTextAdapt: true,
+          splitScreenMode: true,
+          builder: (context, __) {
+            /// Pass context to appRoute
+            AppRoute.setStream(context);
 
-          return Builder(
-            builder: (context) => MaterialApp.router(
-                routerConfig: AppRoute.router,
+            return MaterialApp.router(
+              routerConfig: AppRoute.router,
                 localizationsDelegates: const [
                   Strings.delegate,
                   GlobalMaterialLocalizations.delegate,
@@ -51,11 +59,13 @@ class MyApp extends StatelessWidget {
                   );
                 },
               title: Constants.get.appName,
+              theme: themeLight(context),
+              darkTheme: themeDark(context),
               locale: const Locale("en"),
               supportedLocales: L10n.all,
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }

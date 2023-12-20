@@ -96,4 +96,7 @@ class StringsFr extends Strings {
 
   @override
   String get createStimulus => 'Créer';
+
+  @override
+  String get askForgetYourPassword => 'Mot de passe oublié?';
 }
