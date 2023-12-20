@@ -23,7 +23,6 @@ mixin _$ForgetPasswordResponse {
   bool? get success => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ForgetPasswordResponseCopyWith<ForgetPasswordResponse> get copyWith => throw _privateConstructorUsedError;
 }
@@ -32,7 +31,6 @@ mixin _$ForgetPasswordResponse {
 abstract class $ForgetPasswordResponseCopyWith<$Res> {
   factory $ForgetPasswordResponseCopyWith(ForgetPasswordResponse value, $Res Function(ForgetPasswordResponse) then) =
       _$ForgetPasswordResponseCopyWithImpl<$Res, ForgetPasswordResponse>;
-
   @useResult
   $Res call({bool? success});
 }
@@ -44,7 +42,6 @@ class _$ForgetPasswordResponseCopyWithImpl<$Res, $Val extends ForgetPasswordResp
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -64,10 +61,9 @@ class _$ForgetPasswordResponseCopyWithImpl<$Res, $Val extends ForgetPasswordResp
 
 /// @nodoc
 abstract class _$$ForgetPasswordResponseImplCopyWith<$Res> implements $ForgetPasswordResponseCopyWith<$Res> {
-  factory _$$ForgetPasswordResponseImplCopyWith(
-          _$ForgetPasswordResponseImpl value, $Res Function(_$ForgetPasswordResponseImpl) then) =
+  factory _$$ForgetPasswordResponseImplCopyWith(_$ForgetPasswordResponseImpl value,
+      $Res Function(_$ForgetPasswordResponseImpl) then) =
       __$$ForgetPasswordResponseImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({bool? success});
@@ -77,8 +73,8 @@ abstract class _$$ForgetPasswordResponseImplCopyWith<$Res> implements $ForgetPas
 class __$$ForgetPasswordResponseImplCopyWithImpl<$Res>
     extends _$ForgetPasswordResponseCopyWithImpl<$Res, _$ForgetPasswordResponseImpl>
     implements _$$ForgetPasswordResponseImplCopyWith<$Res> {
-  __$$ForgetPasswordResponseImplCopyWithImpl(
-      _$ForgetPasswordResponseImpl _value, $Res Function(_$ForgetPasswordResponseImpl) _then)
+  __$$ForgetPasswordResponseImplCopyWithImpl(_$ForgetPasswordResponseImpl _value,
+      $Res Function(_$ForgetPasswordResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -139,14 +135,12 @@ class _$ForgetPasswordResponseImpl extends _ForgetPasswordResponse {
 
 abstract class _ForgetPasswordResponse extends ForgetPasswordResponse {
   const factory _ForgetPasswordResponse({final bool? success}) = _$ForgetPasswordResponseImpl;
-
   const _ForgetPasswordResponse._() : super._();
 
   factory _ForgetPasswordResponse.fromJson(Map<String, dynamic> json) = _$ForgetPasswordResponseImpl.fromJson;
 
   @override
   bool? get success;
-
   @override
   @JsonKey(ignore: true)
   _$$ForgetPasswordResponseImplCopyWith<_$ForgetPasswordResponseImpl> get copyWith =>

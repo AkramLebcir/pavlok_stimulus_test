@@ -21,11 +21,9 @@ RegisterParams _$RegisterParamsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RegisterParams {
   String get email => throw _privateConstructorUsedError;
-
   String get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $RegisterParamsCopyWith<RegisterParams> get copyWith => throw _privateConstructorUsedError;
 }
@@ -34,7 +32,6 @@ mixin _$RegisterParams {
 abstract class $RegisterParamsCopyWith<$Res> {
   factory $RegisterParamsCopyWith(RegisterParams value, $Res Function(RegisterParams) then) =
       _$RegisterParamsCopyWithImpl<$Res, RegisterParams>;
-
   @useResult
   $Res call({String email, String password});
 }
@@ -45,7 +42,6 @@ class _$RegisterParamsCopyWithImpl<$Res, $Val extends RegisterParams> implements
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -72,7 +68,6 @@ class _$RegisterParamsCopyWithImpl<$Res, $Val extends RegisterParams> implements
 abstract class _$$RegisterParamsImplCopyWith<$Res> implements $RegisterParamsCopyWith<$Res> {
   factory _$$RegisterParamsImplCopyWith(_$RegisterParamsImpl value, $Res Function(_$RegisterParamsImpl) then) =
       __$$RegisterParamsImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({String email, String password});
@@ -156,10 +151,8 @@ abstract class _RegisterParams implements RegisterParams {
 
   @override
   String get email;
-
   @override
   String get password;
-
   @override
   @JsonKey(ignore: true)
   _$$RegisterParamsImplCopyWith<_$RegisterParamsImpl> get copyWith => throw _privateConstructorUsedError;

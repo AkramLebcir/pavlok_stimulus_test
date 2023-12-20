@@ -26,7 +26,6 @@ mixin _$ForgetPassword {
 abstract class $ForgetPasswordCopyWith<$Res> {
   factory $ForgetPasswordCopyWith(ForgetPassword value, $Res Function(ForgetPassword) then) =
       _$ForgetPasswordCopyWithImpl<$Res, ForgetPassword>;
-
   @useResult
   $Res call({bool? success});
 }
@@ -37,7 +36,6 @@ class _$ForgetPasswordCopyWithImpl<$Res, $Val extends ForgetPassword> implements
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -59,7 +57,6 @@ class _$ForgetPasswordCopyWithImpl<$Res, $Val extends ForgetPassword> implements
 abstract class _$$ForgetPasswordImplCopyWith<$Res> implements $ForgetPasswordCopyWith<$Res> {
   factory _$$ForgetPasswordImplCopyWith(_$ForgetPasswordImpl value, $Res Function(_$ForgetPasswordImpl) then) =
       __$$ForgetPasswordImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({bool? success});
@@ -121,7 +118,6 @@ abstract class _ForgetPassword implements ForgetPassword {
 
   @override
   bool? get success;
-
   @override
   @JsonKey(ignore: true)
   _$$ForgetPasswordImplCopyWith<_$ForgetPasswordImpl> get copyWith => throw _privateConstructorUsedError;

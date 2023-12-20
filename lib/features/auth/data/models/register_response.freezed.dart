@@ -21,13 +21,10 @@ RegisterResponse _$RegisterResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RegisterResponse {
   int? get id => throw _privateConstructorUsedError;
-
   String? get token => throw _privateConstructorUsedError;
-
   String? get error => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $RegisterResponseCopyWith<RegisterResponse> get copyWith => throw _privateConstructorUsedError;
 }
@@ -36,7 +33,6 @@ mixin _$RegisterResponse {
 abstract class $RegisterResponseCopyWith<$Res> {
   factory $RegisterResponseCopyWith(RegisterResponse value, $Res Function(RegisterResponse) then) =
       _$RegisterResponseCopyWithImpl<$Res, RegisterResponse>;
-
   @useResult
   $Res call({int? id, String? token, String? error});
 }
@@ -47,7 +43,6 @@ class _$RegisterResponseCopyWithImpl<$Res, $Val extends RegisterResponse> implem
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -79,7 +74,6 @@ class _$RegisterResponseCopyWithImpl<$Res, $Val extends RegisterResponse> implem
 abstract class _$$RegisterResponseImplCopyWith<$Res> implements $RegisterResponseCopyWith<$Res> {
   factory _$$RegisterResponseImplCopyWith(_$RegisterResponseImpl value, $Res Function(_$RegisterResponseImpl) then) =
       __$$RegisterResponseImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({int? id, String? token, String? error});
@@ -164,20 +158,16 @@ class _$RegisterResponseImpl extends _RegisterResponse {
 
 abstract class _RegisterResponse extends RegisterResponse {
   const factory _RegisterResponse({final int? id, final String? token, final String? error}) = _$RegisterResponseImpl;
-
   const _RegisterResponse._() : super._();
 
   factory _RegisterResponse.fromJson(Map<String, dynamic> json) = _$RegisterResponseImpl.fromJson;
 
   @override
   int? get id;
-
   @override
   String? get token;
-
   @override
   String? get error;
-
   @override
   @JsonKey(ignore: true)
   _$$RegisterResponseImplCopyWith<_$RegisterResponseImpl> get copyWith => throw _privateConstructorUsedError;

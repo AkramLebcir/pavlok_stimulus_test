@@ -23,7 +23,6 @@ mixin _$LoginResponse {
   AuthResponse? get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LoginResponseCopyWith<LoginResponse> get copyWith => throw _privateConstructorUsedError;
 }
@@ -32,7 +31,6 @@ mixin _$LoginResponse {
 abstract class $LoginResponseCopyWith<$Res> {
   factory $LoginResponseCopyWith(LoginResponse value, $Res Function(LoginResponse) then) =
       _$LoginResponseCopyWithImpl<$Res, LoginResponse>;
-
   @useResult
   $Res call({AuthResponse? user});
 
@@ -45,7 +43,6 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse> implements $
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -79,7 +76,6 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse> implements $
 abstract class _$$LoginResponseImplCopyWith<$Res> implements $LoginResponseCopyWith<$Res> {
   factory _$$LoginResponseImplCopyWith(_$LoginResponseImpl value, $Res Function(_$LoginResponseImpl) then) =
       __$$LoginResponseImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({AuthResponse? user});
@@ -151,14 +147,12 @@ class _$LoginResponseImpl extends _LoginResponse {
 
 abstract class _LoginResponse extends LoginResponse {
   const factory _LoginResponse({final AuthResponse? user}) = _$LoginResponseImpl;
-
   const _LoginResponse._() : super._();
 
   factory _LoginResponse.fromJson(Map<String, dynamic> json) = _$LoginResponseImpl.fromJson;
 
   @override
   AuthResponse? get user;
-
   @override
   @JsonKey(ignore: true)
   _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith => throw _privateConstructorUsedError;
@@ -171,13 +165,10 @@ AuthResponse _$AuthResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AuthResponse {
   int? get id => throw _privateConstructorUsedError;
-
   String? get token => throw _privateConstructorUsedError;
-
   String? get error => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $AuthResponseCopyWith<AuthResponse> get copyWith => throw _privateConstructorUsedError;
 }
@@ -186,7 +177,6 @@ mixin _$AuthResponse {
 abstract class $AuthResponseCopyWith<$Res> {
   factory $AuthResponseCopyWith(AuthResponse value, $Res Function(AuthResponse) then) =
       _$AuthResponseCopyWithImpl<$Res, AuthResponse>;
-
   @useResult
   $Res call({int? id, String? token, String? error});
 }
@@ -197,7 +187,6 @@ class _$AuthResponseCopyWithImpl<$Res, $Val extends AuthResponse> implements $Au
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -229,7 +218,6 @@ class _$AuthResponseCopyWithImpl<$Res, $Val extends AuthResponse> implements $Au
 abstract class _$$AuthResponseImplCopyWith<$Res> implements $AuthResponseCopyWith<$Res> {
   factory _$$AuthResponseImplCopyWith(_$AuthResponseImpl value, $Res Function(_$AuthResponseImpl) then) =
       __$$AuthResponseImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({int? id, String? token, String? error});
@@ -314,20 +302,16 @@ class _$AuthResponseImpl extends _AuthResponse {
 
 abstract class _AuthResponse extends AuthResponse {
   const factory _AuthResponse({final int? id, final String? token, final String? error}) = _$AuthResponseImpl;
-
   const _AuthResponse._() : super._();
 
   factory _AuthResponse.fromJson(Map<String, dynamic> json) = _$AuthResponseImpl.fromJson;
 
   @override
   int? get id;
-
   @override
   String? get token;
-
   @override
   String? get error;
-
   @override
   @JsonKey(ignore: true)
   _$$AuthResponseImplCopyWith<_$AuthResponseImpl> get copyWith => throw _privateConstructorUsedError;

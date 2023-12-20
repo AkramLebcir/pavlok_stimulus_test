@@ -21,11 +21,9 @@ LoginParams _$LoginParamsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LoginParams {
   String get email => throw _privateConstructorUsedError;
-
   String get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LoginParamsCopyWith<LoginParams> get copyWith => throw _privateConstructorUsedError;
 }
@@ -34,7 +32,6 @@ mixin _$LoginParams {
 abstract class $LoginParamsCopyWith<$Res> {
   factory $LoginParamsCopyWith(LoginParams value, $Res Function(LoginParams) then) =
       _$LoginParamsCopyWithImpl<$Res, LoginParams>;
-
   @useResult
   $Res call({String email, String password});
 }
@@ -45,7 +42,6 @@ class _$LoginParamsCopyWithImpl<$Res, $Val extends LoginParams> implements $Logi
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -72,7 +68,6 @@ class _$LoginParamsCopyWithImpl<$Res, $Val extends LoginParams> implements $Logi
 abstract class _$$LoginParamsImplCopyWith<$Res> implements $LoginParamsCopyWith<$Res> {
   factory _$$LoginParamsImplCopyWith(_$LoginParamsImpl value, $Res Function(_$LoginParamsImpl) then) =
       __$$LoginParamsImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({String email, String password});
@@ -156,10 +151,8 @@ abstract class _LoginParams implements LoginParams {
 
   @override
   String get email;
-
   @override
   String get password;
-
   @override
   @JsonKey(ignore: true)
   _$$LoginParamsImplCopyWith<_$LoginParamsImpl> get copyWith => throw _privateConstructorUsedError;

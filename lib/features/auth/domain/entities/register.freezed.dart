@@ -25,7 +25,6 @@ mixin _$Register {
 /// @nodoc
 abstract class $RegisterCopyWith<$Res> {
   factory $RegisterCopyWith(Register value, $Res Function(Register) then) = _$RegisterCopyWithImpl<$Res, Register>;
-
   @useResult
   $Res call({String? token});
 }
@@ -36,7 +35,6 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register> implements $RegisterCo
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -58,7 +56,6 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register> implements $RegisterCo
 abstract class _$$RegisterImplCopyWith<$Res> implements $RegisterCopyWith<$Res> {
   factory _$$RegisterImplCopyWith(_$RegisterImpl value, $Res Function(_$RegisterImpl) then) =
       __$$RegisterImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({String? token});
@@ -119,7 +116,6 @@ abstract class _Register implements Register {
 
   @override
   String? get token;
-
   @override
   @JsonKey(ignore: true)
   _$$RegisterImplCopyWith<_$RegisterImpl> get copyWith => throw _privateConstructorUsedError;

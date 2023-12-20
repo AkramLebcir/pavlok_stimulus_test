@@ -25,7 +25,6 @@ mixin _$Login {
 /// @nodoc
 abstract class $LoginCopyWith<$Res> {
   factory $LoginCopyWith(Login value, $Res Function(Login) then) = _$LoginCopyWithImpl<$Res, Login>;
-
   @useResult
   $Res call({String? token});
 }
@@ -36,7 +35,6 @@ class _$LoginCopyWithImpl<$Res, $Val extends Login> implements $LoginCopyWith<$R
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -57,7 +55,6 @@ class _$LoginCopyWithImpl<$Res, $Val extends Login> implements $LoginCopyWith<$R
 /// @nodoc
 abstract class _$$LoginImplCopyWith<$Res> implements $LoginCopyWith<$Res> {
   factory _$$LoginImplCopyWith(_$LoginImpl value, $Res Function(_$LoginImpl) then) = __$$LoginImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({String? token});
@@ -117,7 +114,6 @@ abstract class _Login implements Login {
 
   @override
   String? get token;
-
   @override
   @JsonKey(ignore: true)
   _$$LoginImplCopyWith<_$LoginImpl> get copyWith => throw _privateConstructorUsedError;

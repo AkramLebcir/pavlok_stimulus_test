@@ -23,7 +23,6 @@ mixin _$ForgetPasswordParams {
   String get email => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ForgetPasswordParamsCopyWith<ForgetPasswordParams> get copyWith => throw _privateConstructorUsedError;
 }
@@ -32,7 +31,6 @@ mixin _$ForgetPasswordParams {
 abstract class $ForgetPasswordParamsCopyWith<$Res> {
   factory $ForgetPasswordParamsCopyWith(ForgetPasswordParams value, $Res Function(ForgetPasswordParams) then) =
       _$ForgetPasswordParamsCopyWithImpl<$Res, ForgetPasswordParams>;
-
   @useResult
   $Res call({String email});
 }
@@ -44,7 +42,6 @@ class _$ForgetPasswordParamsCopyWithImpl<$Res, $Val extends ForgetPasswordParams
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -67,7 +64,6 @@ abstract class _$$ForgetPasswordParamsImplCopyWith<$Res> implements $ForgetPassw
   factory _$$ForgetPasswordParamsImplCopyWith(
           _$ForgetPasswordParamsImpl value, $Res Function(_$ForgetPasswordParamsImpl) then) =
       __$$ForgetPasswordParamsImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({String email});
@@ -144,7 +140,6 @@ abstract class _ForgetPasswordParams implements ForgetPasswordParams {
 
   @override
   String get email;
-
   @override
   @JsonKey(ignore: true)
   _$$ForgetPasswordParamsImplCopyWith<_$ForgetPasswordParamsImpl> get copyWith => throw _privateConstructorUsedError;
