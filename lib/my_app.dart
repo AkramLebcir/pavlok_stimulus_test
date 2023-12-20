@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
 
                   return MediaQuery(
                     data: data.copyWith(
-                      textScaler: const TextScaler.linear(1),
+                      textScaleFactor: 1,
                       alwaysUse24HourFormat: true,
                     ),
                     child: child!,
