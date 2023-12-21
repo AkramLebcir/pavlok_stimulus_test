@@ -317,17 +317,17 @@ class _UserPageState extends State<UserPage> {
                           },
                         ),
 
-                        // /// timezone
-                        // MyCustomInput(
-                        //   key: const Key("timezone"),
-                        //   currentVal: data?.timezone ?? '',
-                        //   prefixIcon: Icon(
-                        //     Icons.access_time_rounded,
-                        //     color: Theme.of(context).textTheme.bodyLarge?.color,
-                        //     size: 18,
-                        //   ),
-                        //   hintText: Strings.of(context)!.timezone,
-                        // ),
+                        /// timezone
+                        MyCustomInput(
+                          key: const Key("timezone"),
+                          currentVal: data?.timezone ?? '',
+                          prefixIcon: Icon(
+                            Icons.access_time_rounded,
+                            color: Theme.of(context).textTheme.bodyLarge?.color,
+                            size: 18,
+                          ),
+                          hintText: Strings.of(context)!.timezone,
+                        ),
 
                         /// Save
                         Button(

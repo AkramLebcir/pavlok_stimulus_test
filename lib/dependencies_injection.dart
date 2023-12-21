@@ -1,8 +1,7 @@
 import 'package:get_it/get_it.dart';
+import 'package:pavlok_stimulus_test/core/core.dart';
 import 'package:pavlok_stimulus_test/features/features.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
-
-import 'core/core.dart';
 
 GetIt sl = GetIt.instance;
 
@@ -43,6 +42,7 @@ void _repositories() {
     () => AuthRepositoryImpl(sl(), sl()),
   );
   sl.registerLazySingleton<StimulusRepository>(() => StimulusRepositoryImpl(sl()));
+  sl.registerLazySingleton<UserRepository>(() => UserRepositoryImpl(sl()));
 }
 
 /// Register dataSources
@@ -52,6 +52,9 @@ void _dataSources() {
   );
   sl.registerLazySingleton<StimulusRemoteDatasource>(
     () => StimulusRemoteDatasourceImpl(sl()),
+  );
+  sl.registerLazySingleton<UserRemoteDatasource>(
+    () => UserRemoteDatasourceImpl(sl()),
   );
 }
 
@@ -64,6 +67,10 @@ void _useCase() {
   /// Stimulus
   sl.registerLazySingleton(() => GetStimulus(sl()));
   sl.registerLazySingleton(() => PostStimulus(sl()));
+
+  /// User
+  sl.registerLazySingleton(() => GetUser(sl()));
+  sl.registerLazySingleton(() => PostUser(sl()));
 }
 
 void _cubit() {
@@ -78,6 +85,11 @@ void _cubit() {
 
   /// Stimulus
   sl.registerFactory(() => CreateStimulusCubit(sl()));
+
+  /// User
+  sl.registerFactory(() => UserCubit(sl(), sl()));
+
+  sl.registerFactory(() => PikerCubit());
 }
 
 void _bloc(){

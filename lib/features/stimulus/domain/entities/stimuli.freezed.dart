@@ -25,7 +25,6 @@ mixin _$Stimuli {
 /// @nodoc
 abstract class $StimuliCopyWith<$Res> {
   factory $StimuliCopyWith(Stimuli value, $Res Function(Stimuli) then) = _$StimuliCopyWithImpl<$Res, Stimuli>;
-
   @useResult
   $Res call({List<Stimulus>? stimulus});
 }
@@ -36,7 +35,6 @@ class _$StimuliCopyWithImpl<$Res, $Val extends Stimuli> implements $StimuliCopyW
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -58,7 +56,6 @@ class _$StimuliCopyWithImpl<$Res, $Val extends Stimuli> implements $StimuliCopyW
 abstract class _$$StimuliImplCopyWith<$Res> implements $StimuliCopyWith<$Res> {
   factory _$$StimuliImplCopyWith(_$StimuliImpl value, $Res Function(_$StimuliImpl) then) =
       __$$StimuliImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({List<Stimulus>? stimulus});
@@ -89,7 +86,6 @@ class _$StimuliImpl implements _Stimuli {
   const _$StimuliImpl({final List<Stimulus>? stimulus}) : _stimulus = stimulus;
 
   final List<Stimulus>? _stimulus;
-
   @override
   List<Stimulus>? get stimulus {
     final value = _stimulus;
@@ -126,7 +122,6 @@ abstract class _Stimuli implements Stimuli {
 
   @override
   List<Stimulus>? get stimulus;
-
   @override
   @JsonKey(ignore: true)
   _$$StimuliImplCopyWith<_$StimuliImpl> get copyWith => throw _privateConstructorUsedError;
@@ -135,45 +130,25 @@ abstract class _Stimuli implements Stimuli {
 /// @nodoc
 mixin _$Stimulus {
   int? get id => throw _privateConstructorUsedError;
-
   String? get type => throw _privateConstructorUsedError;
-
   int? get value => throw _privateConstructorUsedError;
-
   DateTime? get sentAt => throw _privateConstructorUsedError;
-
   int? get sentBy => throw _privateConstructorUsedError;
-
   int? get sentTo => throw _privateConstructorUsedError;
-
   DateTime? get createdAt => throw _privateConstructorUsedError;
-
   DateTime? get updatedAt => throw _privateConstructorUsedError;
-
   String? get via => throw _privateConstructorUsedError;
-
   String? get message => throw _privateConstructorUsedError;
-
   DateTime? get pushedAt => throw _privateConstructorUsedError;
-
   DateTime? get failedAt => throw _privateConstructorUsedError;
-
   String? get failureMessage => throw _privateConstructorUsedError;
-
   int? get sentByApp => throw _privateConstructorUsedError;
-
   String? get reason => throw _privateConstructorUsedError;
-
   String? get pattern => throw _privateConstructorUsedError;
-
   int? get repeat => throw _privateConstructorUsedError;
-
   bool? get deleted => throw _privateConstructorUsedError;
-
   String? get userDate => throw _privateConstructorUsedError;
-
   bool? get recent => throw _privateConstructorUsedError;
-
   String? get meta => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -183,7 +158,6 @@ mixin _$Stimulus {
 /// @nodoc
 abstract class $StimulusCopyWith<$Res> {
   factory $StimulusCopyWith(Stimulus value, $Res Function(Stimulus) then) = _$StimulusCopyWithImpl<$Res, Stimulus>;
-
   @useResult
   $Res call(
       {int? id,
@@ -215,7 +189,6 @@ class _$StimulusCopyWithImpl<$Res, $Val extends Stimulus> implements $StimulusCo
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -337,7 +310,6 @@ class _$StimulusCopyWithImpl<$Res, $Val extends Stimulus> implements $StimulusCo
 abstract class _$$StimulusImplCopyWith<$Res> implements $StimulusCopyWith<$Res> {
   factory _$$StimulusImplCopyWith(_$StimulusImpl value, $Res Function(_$StimulusImpl) then) =
       __$$StimulusImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call(
@@ -644,67 +616,46 @@ abstract class _Stimulus implements Stimulus {
 
   @override
   int? get id;
-
   @override
   String? get type;
-
   @override
   int? get value;
-
   @override
   DateTime? get sentAt;
-
   @override
   int? get sentBy;
-
   @override
   int? get sentTo;
-
   @override
   DateTime? get createdAt;
-
   @override
   DateTime? get updatedAt;
-
   @override
   String? get via;
-
   @override
   String? get message;
-
   @override
   DateTime? get pushedAt;
-
   @override
   DateTime? get failedAt;
-
   @override
   String? get failureMessage;
-
   @override
   int? get sentByApp;
-
   @override
   String? get reason;
-
   @override
   String? get pattern;
-
   @override
   int? get repeat;
-
   @override
   bool? get deleted;
-
   @override
   String? get userDate;
-
   @override
   bool? get recent;
-
   @override
   String? get meta;
-
   @override
   @JsonKey(ignore: true)
   _$$StimulusImplCopyWith<_$StimulusImpl> get copyWith => throw _privateConstructorUsedError;

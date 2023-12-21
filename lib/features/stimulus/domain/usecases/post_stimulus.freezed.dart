@@ -21,13 +21,10 @@ PostStimulusParams _$PostStimulusParamsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PostStimulusParams {
   String get stimulusType => throw _privateConstructorUsedError;
-
   String get reason => throw _privateConstructorUsedError;
-
   int get stimulusValue => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $PostStimulusParamsCopyWith<PostStimulusParams> get copyWith => throw _privateConstructorUsedError;
 }
@@ -36,7 +33,6 @@ mixin _$PostStimulusParams {
 abstract class $PostStimulusParamsCopyWith<$Res> {
   factory $PostStimulusParamsCopyWith(PostStimulusParams value, $Res Function(PostStimulusParams) then) =
       _$PostStimulusParamsCopyWithImpl<$Res, PostStimulusParams>;
-
   @useResult
   $Res call({String stimulusType, String reason, int stimulusValue});
 }
@@ -48,7 +44,6 @@ class _$PostStimulusParamsCopyWithImpl<$Res, $Val extends PostStimulusParams>
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -81,7 +76,6 @@ abstract class _$$PostStimulusParamsImplCopyWith<$Res> implements $PostStimulusP
   factory _$$PostStimulusParamsImplCopyWith(
           _$PostStimulusParamsImpl value, $Res Function(_$PostStimulusParamsImpl) then) =
       __$$PostStimulusParamsImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({String stimulusType, String reason, int stimulusValue});
@@ -176,13 +170,10 @@ abstract class _PostStimulusParams implements PostStimulusParams {
 
   @override
   String get stimulusType;
-
   @override
   String get reason;
-
   @override
   int get stimulusValue;
-
   @override
   @JsonKey(ignore: true)
   _$$PostStimulusParamsImplCopyWith<_$PostStimulusParamsImpl> get copyWith => throw _privateConstructorUsedError;

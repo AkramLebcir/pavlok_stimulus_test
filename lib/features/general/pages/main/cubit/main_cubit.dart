@@ -7,7 +7,7 @@ import 'package:pavlok_stimulus_test/utils/utils.dart';
 part 'main_cubit.freezed.dart';
 part 'main_state.dart';
 
-class MainCubit extends Cubit<MainState> {
+class MainCubit extends Cubit<MainState> with MainBoxMixin {
   MainCubit() : super(const _Loading());
 
   int _currentIndex = 0;
@@ -27,6 +27,9 @@ class MainCubit extends Cubit<MainState> {
       DataHelper(
         title: Strings.of(context)!.dashboard,
         isSelected: true,
+      ),
+      DataHelper(
+        title: Strings.of(context)!.profile,
       ),
       DataHelper(
         title: Strings.of(context)!.settings,

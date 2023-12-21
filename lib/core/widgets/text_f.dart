@@ -27,6 +27,9 @@ class TextF extends StatefulWidget {
     this.hintText,
     this.autofillHints,
     this.semantic,
+    this.cursorColor,
+    this.showCursor,
+    this.enableInteractiveSelection,
   });
 
   final FocusNode? curFocusNode;
@@ -51,6 +54,9 @@ class TextF extends StatefulWidget {
   final String? hintText;
   final Iterable<String>? autofillHints;
   final String? semantic;
+  final Color? cursorColor;
+  final bool? showCursor;
+  final bool? enableInteractiveSelection;
 
   @override
   _TextFState createState() => _TextFState();
@@ -64,7 +70,7 @@ class _TextFState extends State<TextF> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.symmetric(vertical: Dimens.space8),
+      margin: EdgeInsets.symmetric(vertical: Dimens.space4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -83,7 +89,6 @@ class _TextFState extends State<TextF> {
               label: widget.semantic,
               child: TextFormField(
                 key: widget.key,
-                autovalidateMode: AutovalidateMode.onUserInteraction,
                 autofillHints: widget.autofillHints,
                 enabled: widget.enable,
                 obscureText: widget.obscureText ?? false,
@@ -97,7 +102,9 @@ class _TextFState extends State<TextF> {
                 inputFormatters: widget.inputFormatter,
                 textAlignVertical: TextAlignVertical.center,
                 style: Theme.of(context).textTheme.bodyMedium,
-                cursorColor: Palette.text,
+                cursorColor: widget.cursorColor ?? Palette.text,
+                showCursor: widget.showCursor,
+                enableInteractiveSelection: widget.enableInteractiveSelection,
                 decoration: InputDecoration(
                   prefixText: widget.prefixText,
                   alignLabelWithHint: true,
@@ -156,7 +163,7 @@ class _TextFState extends State<TextF> {
                     ),
                   ),
                 ),
-                validator: widget.validator as String? Function(String?)?,
+                // validator: widget.validator as String? Function(String?)?,
                 onChanged: widget.onChanged,
                 onTap: widget.onTap as void Function()?,
                 onFieldSubmitted: (value) {

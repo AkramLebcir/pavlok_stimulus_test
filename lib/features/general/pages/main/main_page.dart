@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
           width: context.widthInPercent(80),
           child: MenuDrawer(
             dataMenu: context.read<MainCubit>().dataMenus,
-            email: "user@gmail.com",
+            email: MainBoxMixin().getData<String>(MainBoxKeys.email),
             currentIndex: (int index) {
               if (index != 2) {
                 context.read<MainCubit>().updateIndex(index);

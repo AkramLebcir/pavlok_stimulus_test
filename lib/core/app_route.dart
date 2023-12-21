@@ -89,6 +89,14 @@ class AppRoute {
           //   ),
           // ),
           GoRoute(
+            path: Routes.user.path,
+            name: Routes.user.name,
+            builder: (_, __) => BlocProvider(
+              create: (context) => sl<UserCubit>(),
+              child: const UserPage(),
+            ),
+          ),
+          GoRoute(
             path: Routes.settings.path,
             name: Routes.settings.name,
             builder: (_, __) => const SettingsPage(),
