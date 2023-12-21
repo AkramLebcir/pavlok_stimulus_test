@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 
 final log = Logger(
-  level: ["sandbox", "staging"].contains(const String.fromEnvironment('ENV')) ? Level.all : Level.all,
+  level: ["sandbox", "staging"].contains(const String.fromEnvironment('ENV')) ? Level.all : Level.off,
   printer: PrettyPrinter(
     methodCount: 1,
     lineLength: 110,
