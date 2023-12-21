@@ -1,8 +1,8 @@
 import 'package:get_it/get_it.dart';
+import 'package:pavlok_stimulus_test/features/features.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
 
 import 'core/core.dart';
-import 'features/auth/auth.dart';
 
 GetIt sl = GetIt.instance;
 
@@ -63,6 +63,10 @@ void _cubit() {
   sl.registerFactory(() => RegisterCubit(sl()));
   sl.registerFactory(() => ForgetPasswordCubit(sl()));
   sl.registerFactory(() => AuthCubit(sl()));
+
+  /// General
+  sl.registerFactory(() => SettingsCubit());
+  sl.registerFactory(() => MainCubit());
 }
 
 void _bloc(){

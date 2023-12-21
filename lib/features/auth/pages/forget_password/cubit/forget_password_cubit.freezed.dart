@@ -24,7 +24,6 @@ mixin _$ForgetPasswordState {
     required TResult Function() init,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
@@ -42,7 +41,6 @@ mixin _$ForgetPasswordState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Loading value) loading,
@@ -51,7 +49,6 @@ mixin _$ForgetPasswordState {
     required TResult Function(_Init value) init,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Loading value)? loading,

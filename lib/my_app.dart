@@ -6,13 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:pavlok_stimulus_test/core/core.dart';
 import 'package:pavlok_stimulus_test/dependencies_injection.dart';
+import 'package:pavlok_stimulus_test/features/features.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
 
-import 'features/auth/auth.dart';
-
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -24,6 +21,7 @@ class MyApp extends StatelessWidget {
     log.d(const String.fromEnvironment('ENV'));
     return MultiBlocProvider(
       providers: [
+        BlocProvider(create: (_) => sl<SettingsCubit>()..getActiveTheme()),
         BlocProvider(create: (_) => sl<AuthCubit>()),
       ],
       child: OKToast(
@@ -38,8 +36,9 @@ class MyApp extends StatelessWidget {
             /// Pass context to appRoute
             AppRoute.setStream(context);
 
-            return MaterialApp.router(
-              routerConfig: AppRoute.router,
+            return BlocBuilder<SettingsCubit, DataHelper>(
+              builder: (_, data) => MaterialApp.router(
+                routerConfig: AppRoute.router,
                 localizationsDelegates: const [
                   Strings.delegate,
                   GlobalMaterialLocalizations.delegate,
@@ -58,11 +57,13 @@ class MyApp extends StatelessWidget {
                     child: child!,
                   );
                 },
-              title: Constants.get.appName,
-              theme: themeLight(context),
-              darkTheme: themeDark(context),
-              locale: const Locale("en"),
-              supportedLocales: L10n.all,
+                title: Constants.get.appName,
+                theme: themeLight(context),
+                darkTheme: themeDark(context),
+                locale: Locale(data.type ?? "en"),
+                supportedLocales: L10n.all,
+                themeMode: data.activeTheme.mode,
+              ),
             );
           },
         ),

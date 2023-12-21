@@ -25,7 +25,6 @@ mixin _$RegisterState {
     required TResult Function() showHidePassword,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
@@ -45,7 +44,6 @@ mixin _$RegisterState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Loading value) loading,
@@ -55,7 +53,6 @@ mixin _$RegisterState {
     required TResult Function(_ShowHidePassword value) showHidePassword,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Loading value)? loading,

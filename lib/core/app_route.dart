@@ -2,10 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pavlok_stimulus_test/dependencies_injection.dart';
 import 'package:pavlok_stimulus_test/features/features.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
-
-import '../dependencies_injection.dart';
 
 enum Routes {
   root("/"),
@@ -13,6 +12,8 @@ enum Routes {
 
   /// Home Page
   dashboard("/dashboard"),
+  user("/user"),
+  settings("/settings"),
 
   /// Auth Page
   login("/auth/login"),
@@ -65,13 +66,28 @@ class AppRoute {
           child: const ForgetPasswordPage(),
         ),
       ),
+      ShellRoute(
+        builder: (_, __, child) => BlocProvider(
+          create: (context) => sl<MainCubit>(),
+          child: MainPage(child: child),
+        ),
+        routes: [
+          GoRoute(
+            path: Routes.settings.path,
+            name: Routes.settings.name,
+            builder: (_, __) => const SettingsPage(),
+          ),
+        ],
+      ),
     ],
     initialLocation: Routes.splashScreen.path,
     routerNeglect: true,
     debugLogDiagnostics: kDebugMode,
     refreshListenable: GoRouterRefreshStream(context.read<AuthCubit>().stream),
     redirect: (_, GoRouterState state) {
-      final bool isLoginPage = state.matchedLocation == Routes.login.path;
+      final bool isLoginPage = state.matchedLocation == Routes.login.path ||
+          state.matchedLocation == Routes.register.path ||
+          state.matchedLocation == Routes.forgetPassword.path;
 
       if (!((MainBoxMixin.mainBox?.get(MainBoxKeys.isLogin.name) as bool?) ?? false)) {
         return isLoginPage ? null : Routes.login.path;
@@ -81,6 +97,7 @@ class AppRoute {
         return Routes.root.path;
       }
 
+      /// No direct
       return null;
     },
   );
