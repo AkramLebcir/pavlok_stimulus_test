@@ -42,12 +42,16 @@ void _repositories() {
   sl.registerLazySingleton<AuthRepository>(
     () => AuthRepositoryImpl(sl(), sl()),
   );
+  sl.registerLazySingleton<StimulusRepository>(() => StimulusRepositoryImpl(sl()));
 }
 
 /// Register dataSources
 void _dataSources() {
   sl.registerLazySingleton<AuthRemoteDatasource>(
     () => AuthRemoteDatasourceImpl(sl()),
+  );
+  sl.registerLazySingleton<StimulusRemoteDatasource>(
+    () => StimulusRemoteDatasourceImpl(sl()),
   );
 }
 
@@ -56,6 +60,10 @@ void _useCase() {
   sl.registerLazySingleton(() => PostLogin(sl()));
   sl.registerLazySingleton(() => PostRegister(sl()));
   sl.registerLazySingleton(() => PostForgetPassword(sl()));
+
+  /// Stimulus
+  sl.registerLazySingleton(() => GetStimulus(sl()));
+  sl.registerLazySingleton(() => PostStimulus(sl()));
 }
 
 void _cubit() {
@@ -67,8 +75,12 @@ void _cubit() {
   /// General
   sl.registerFactory(() => SettingsCubit());
   sl.registerFactory(() => MainCubit());
+
+  /// Stimulus
+  sl.registerFactory(() => CreateStimulusCubit(sl()));
 }
 
 void _bloc(){
-
+  /// Stimulus
+  sl.registerFactory(() => StimulusBloc(sl()));
 }

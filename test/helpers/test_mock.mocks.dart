@@ -8,10 +8,11 @@ import 'dart:async' as _i6;
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:flutter/foundation.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i3;
-import 'package:flutter/src/widgets/notification_listener.dart' as _i8;
+import 'package:flutter/src/widgets/notification_listener.dart' as _i9;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:pavlok_stimulus_test/core/core.dart' as _i7;
 import 'package:pavlok_stimulus_test/features/auth/auth.dart' as _i5;
+import 'package:pavlok_stimulus_test/features/stimulus/stimulus.dart' as _i8;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -196,6 +197,89 @@ class MockAuthRemoteDatasource extends _i1.Mock implements _i5.AuthRemoteDatasou
       ) as _i6.Future<_i2.Either<_i7.Failure, _i5.ForgetPasswordResponse>>);
 }
 
+/// A class which mocks [StimulusRepository].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockStimulusRepository extends _i1.Mock implements _i8.StimulusRepository {
+  MockStimulusRepository() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i6.Future<_i2.Either<_i7.Failure, _i8.Stimuli>> stimulus(_i8.StimulusParams? stimulusParams) => (super.noSuchMethod(
+        Invocation.method(
+          #stimulus,
+          [stimulusParams],
+        ),
+        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i8.Stimuli>>.value(_FakeEither_0<_i7.Failure, _i8.Stimuli>(
+          this,
+          Invocation.method(
+            #stimulus,
+            [stimulusParams],
+          ),
+        )),
+      ) as _i6.Future<_i2.Either<_i7.Failure, _i8.Stimuli>>);
+
+  @override
+  _i6.Future<_i2.Either<_i7.Failure, _i8.Stimulus>> postStimulus(_i8.PostStimulusParams? postStimulusParams) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #postStimulus,
+          [postStimulusParams],
+        ),
+        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i8.Stimulus>>.value(_FakeEither_0<_i7.Failure, _i8.Stimulus>(
+          this,
+          Invocation.method(
+            #postStimulus,
+            [postStimulusParams],
+          ),
+        )),
+      ) as _i6.Future<_i2.Either<_i7.Failure, _i8.Stimulus>>);
+}
+
+/// A class which mocks [StimulusRemoteDatasource].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockStimulusRemoteDatasource extends _i1.Mock implements _i8.StimulusRemoteDatasource {
+  MockStimulusRemoteDatasource() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i6.Future<_i2.Either<_i7.Failure, _i8.StimuliResponse>> stimulus(_i8.StimulusParams? stimulusParams) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #stimulus,
+          [stimulusParams],
+        ),
+        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i8.StimuliResponse>>.value(
+            _FakeEither_0<_i7.Failure, _i8.StimuliResponse>(
+          this,
+          Invocation.method(
+            #stimulus,
+            [stimulusParams],
+          ),
+        )),
+      ) as _i6.Future<_i2.Either<_i7.Failure, _i8.StimuliResponse>>);
+
+  @override
+  _i6.Future<_i2.Either<_i7.Failure, _i8.StimulusResponse>> postStimulus(_i8.PostStimulusParams? postStimulusParams) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #postStimulus,
+          [postStimulusParams],
+        ),
+        returnValue: _i6.Future<_i2.Either<_i7.Failure, _i8.StimulusResponse>>.value(
+            _FakeEither_0<_i7.Failure, _i8.StimulusResponse>(
+          this,
+          Invocation.method(
+            #postStimulus,
+            [postStimulusParams],
+          ),
+        )),
+      ) as _i6.Future<_i2.Either<_i7.Failure, _i8.StimulusResponse>>);
+}
+
 /// A class which mocks [BuildContext].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -275,7 +359,7 @@ class MockBuildContext extends _i1.Mock implements _i3.BuildContext {
       );
 
   @override
-  void dispatchNotification(_i8.Notification? notification) => super.noSuchMethod(
+  void dispatchNotification(_i9.Notification? notification) => super.noSuchMethod(
         Invocation.method(
           #dispatchNotification,
           [notification],

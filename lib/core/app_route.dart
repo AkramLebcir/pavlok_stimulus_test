@@ -12,7 +12,6 @@ enum Routes {
 
   /// Home Page
   dashboard("/dashboard"),
-  user("/user"),
   settings("/settings"),
 
   /// Auth Page
@@ -72,6 +71,14 @@ class AppRoute {
           child: MainPage(child: child),
         ),
         routes: [
+          GoRoute(
+            path: Routes.dashboard.path,
+            name: Routes.dashboard.name,
+            builder: (_, __) => BlocProvider(
+              create: (_) => sl<StimulusBloc>()..add(const StimulusEvent.loadStimulus(StimulusParams())),
+              child: const DashboardPage(),
+            ),
+          ),
           GoRoute(
             path: Routes.settings.path,
             name: Routes.settings.name,

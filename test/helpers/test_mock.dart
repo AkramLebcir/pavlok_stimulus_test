@@ -5,6 +5,8 @@ import 'package:pavlok_stimulus_test/features/features.dart';
 @GenerateMocks([
   AuthRepository,
   AuthRemoteDatasource,
+  StimulusRepository,
+  StimulusRemoteDatasource,
 ])
 @GenerateNiceMocks([MockSpec<BuildContext>()])
 void main() {}
