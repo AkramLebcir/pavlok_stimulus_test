@@ -17,6 +17,7 @@ void main() {
   late MockAuthRemoteDatasource mockAuthRemoteDatasource;
   late AuthRepositoryImpl authRepositoryImpl;
   late Login login;
+  late Register register;
 
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +30,9 @@ void main() {
     authRepositoryImpl = AuthRepositoryImpl(mockAuthRemoteDatasource, sl());
     login = LoginResponse.fromJson(
       json.decode(jsonReader(successLoginPath)) as Map<String, dynamic>,
+    ).toEntity();
+    register = RegisterResponse.fromJson(
+      json.decode(jsonReader(successRegisterPath)) as Map<String, dynamic>,
     ).toEntity();
   });
 
@@ -64,6 +68,42 @@ void main() {
 
         // assert
         verify(mockAuthRemoteDatasource.login(loginParams));
+        expect(result, const Left(ServerFailure('')));
+      },
+    );
+  });
+
+  group("register", () {
+    const registerParams = RegisterParams(email: "email", password: "password");
+    test('should return register when call data is successful', () async {
+      // arrange
+      when(mockAuthRemoteDatasource.register(registerParams)).thenAnswer(
+        (_) async => Right(
+          RegisterResponse.fromJson(
+            json.decode(jsonReader(successRegisterPath)) as Map<String, dynamic>,
+          ),
+        ),
+      );
+
+      // act
+      final result = await authRepositoryImpl.register(registerParams);
+
+      // assert
+      verify(mockAuthRemoteDatasource.register(registerParams));
+      expect(result, equals(Right(register)));
+    });
+
+    test(
+      'should return server failure when call data is unsuccessful',
+      () async {
+        // arrange
+        when(mockAuthRemoteDatasource.register(registerParams)).thenAnswer((_) async => const Left(ServerFailure('')));
+
+        // act
+        final result = await authRepositoryImpl.register(registerParams);
+
+        // assert
+        verify(mockAuthRemoteDatasource.register(registerParams));
         expect(result, const Left(ServerFailure('')));
       },
     );

@@ -7,4 +7,5 @@ class Constants {
   String english = "English";
   String french = "French";
 
+  List<String> listType = ["zap", "beep", "vibe"];
 }

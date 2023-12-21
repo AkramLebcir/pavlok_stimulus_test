@@ -26,6 +26,62 @@ void main() {
     dataSource = AuthRemoteDatasourceImpl(sl<DioClient>());
   });
 
+  group('register', () {
+    const registerParams = RegisterParams(email: "eve.holt@reqres.in", password: "pistol");
+    final registerModel = RegisterResponse.fromJson(
+      json.decode(jsonReader(successRegisterPath)) as Map<String, dynamic>,
+    );
+
+    test(
+      'should return register success model when response code is 200',
+      () async {
+        /// arrange
+        dioAdapter.onPost(
+          ListAPI.register,
+          (server) => server.reply(
+            200,
+            json.decode(jsonReader(successRegisterPath)),
+          ),
+          data: {"user": registerParams.toJson()},
+        );
+
+        /// act
+        final result = await dataSource.register(registerParams);
+
+        /// assert
+        result.fold(
+          (l) => expect(l, null),
+          (r) => expect(r, registerModel),
+        );
+      },
+    );
+
+    test(
+      'should return register unsuccessful model when response code is 400',
+      () async {
+        /// arrange
+
+        dioAdapter.onPost(
+          ListAPI.register,
+          (server) => server.reply(
+            400,
+            json.decode(jsonReader(unSuccessRegisterPath)),
+          ),
+          data: registerParams.toJson(),
+        );
+
+        /// act
+        final result = await dataSource.register(registerParams);
+
+        /// assert
+        result.fold(
+          (l) => expect(l, isA<ServerFailure>()),
+          (r) => expect(r, null),
+        );
+      },
+    );
+  });
+
   group('login', () {
     const loginParams = LoginParams(email: "akramlebcir@gmail.com", password: "google12G\$");
     final loginModel = LoginResponse.fromJson(json.decode(jsonReader(successLoginPath)) as Map<String, dynamic>);

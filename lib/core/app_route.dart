@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:pavlok_stimulus_test/features/features.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
 
+import '../dependencies_injection.dart';
+
 enum Routes {
   root("/"),
   splashScreen("/splashscreen"),
@@ -14,6 +16,8 @@ enum Routes {
 
   /// Auth Page
   login("/auth/login"),
+  register("/auth/register"),
+  forgetPassword("/auth/forget_password"),
   ;
 
   const Routes(this.path);
@@ -44,6 +48,22 @@ class AppRoute {
         path: Routes.login.path,
         name: Routes.login.name,
         builder: (_, __) => const LoginPage(),
+      ),
+      GoRoute(
+        path: Routes.register.path,
+        name: Routes.register.name,
+        builder: (_, __) => BlocProvider(
+          create: (_) => sl<RegisterCubit>(),
+          child: const RegisterPage(),
+        ),
+      ),
+      GoRoute(
+        path: Routes.forgetPassword.path,
+        name: Routes.forgetPassword.name,
+        builder: (_, __) => BlocProvider(
+          create: (_) => sl<ForgetPasswordCubit>(),
+          child: const ForgetPasswordPage(),
+        ),
       ),
     ],
     initialLocation: Routes.splashScreen.path,

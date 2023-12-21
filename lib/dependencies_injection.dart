@@ -54,10 +54,14 @@ void _dataSources() {
 void _useCase() {
   /// Auth
   sl.registerLazySingleton(() => PostLogin(sl()));
+  sl.registerLazySingleton(() => PostRegister(sl()));
+  sl.registerLazySingleton(() => PostForgetPassword(sl()));
 }
 
 void _cubit() {
   /// Auth
+  sl.registerFactory(() => RegisterCubit(sl()));
+  sl.registerFactory(() => ForgetPasswordCubit(sl()));
   sl.registerFactory(() => AuthCubit(sl()));
 }
 

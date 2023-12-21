@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pavlok_stimulus_test/core/core.dart';
 import 'package:pavlok_stimulus_test/features/features.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
@@ -106,7 +107,9 @@ class _LoginPageState extends State<LoginPage> {
                       ButtonText(
                         title: Strings.of(context)!.askForgetYourPassword,
                         isUpperCase: false,
-                        onPressed: () {},
+                        onPressed: () {
+                          context.pushNamed(Routes.forgetPassword.name);
+                        },
                       ),
                       Button(
                         title: Strings.of(context)!.login,
@@ -124,7 +127,9 @@ class _LoginPageState extends State<LoginPage> {
                       SpacerV(value: Dimens.space24),
                       ButtonText(
                         title: Strings.of(context)!.askRegister,
-                        onPressed: () {},
+                        onPressed: () {
+                          context.pushNamed(Routes.register.name);
+                        },
                       ),
                     ],
                   ),
