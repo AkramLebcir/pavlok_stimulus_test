@@ -99,4 +99,46 @@ class StringsFr extends Strings {
 
   @override
   String get askForgetYourPassword => 'Mot de passe oublié?';
+
+  @override
+  String get profile => 'Profil';
+
+  @override
+  String get save => 'sauvegarder';
+
+  @override
+  String get timezone => 'Fuseau horaire';
+
+  @override
+  String get anonymous => 'Anonyme';
+
+  @override
+  String get height => 'Hauteur';
+
+  @override
+  String get weight => 'Poids';
+
+  @override
+  String get birthDay => 'Anniversaire';
+
+  @override
+  String get lastName => 'Nom de famille';
+
+  @override
+  String get firstName => 'Prénom';
+
+  @override
+  String get username => 'Nom d\'utilisateur';
+
+  @override
+  String get done => 'Fait';
+
+  @override
+  String get selectYourHeight => 'Sélectionnez votre taille';
+
+  @override
+  String get selectYourWeight => 'Sélectionnez votre poids';
+
+  @override
+  String get selectYourBirthday => 'Définissez votre anniversaire';
 }

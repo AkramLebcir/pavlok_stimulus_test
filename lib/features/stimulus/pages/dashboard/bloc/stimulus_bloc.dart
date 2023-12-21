@@ -9,7 +9,6 @@ part 'stimulus_state.dart';
 
 class StimulusBloc extends Bloc<StimulusEvent, StimulusState> {
   final GetStimulus _getStimulus;
-
   StimulusBloc(this._getStimulus) : super(const StimulusState.loading()) {
     on<StimulusEvent>((event, emit) async {
       if (event is _LoadStimulus) await fetchStimulus(event.stimulusParams, emit);

@@ -7,7 +7,7 @@ import 'package:pavlok_stimulus_test/utils/utils.dart';
 part 'auth_cubit.freezed.dart';
 part 'auth_state.dart';
 
-class AuthCubit extends Cubit<AuthState> {
+class AuthCubit extends Cubit<AuthState> with MainBoxMixin {
   AuthCubit(this._postLogin) : super(const _Loading());
 
   final PostLogin _postLogin;
@@ -31,6 +31,7 @@ class AuthCubit extends Cubit<AuthState> {
         }
       },
       (r) {
+        addData<String>(MainBoxKeys.email, params.email);
         return emit(_Success(r.token));
       },
     );

@@ -21,11 +21,9 @@ StimuliResponse _$StimuliResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$StimuliResponse {
   List<StimulusData>? get stimulusList => throw _privateConstructorUsedError;
-
   String? get error => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $StimuliResponseCopyWith<StimuliResponse> get copyWith => throw _privateConstructorUsedError;
 }
@@ -34,7 +32,6 @@ mixin _$StimuliResponse {
 abstract class $StimuliResponseCopyWith<$Res> {
   factory $StimuliResponseCopyWith(StimuliResponse value, $Res Function(StimuliResponse) then) =
       _$StimuliResponseCopyWithImpl<$Res, StimuliResponse>;
-
   @useResult
   $Res call({List<StimulusData>? stimulusList, String? error});
 }
@@ -45,7 +42,6 @@ class _$StimuliResponseCopyWithImpl<$Res, $Val extends StimuliResponse> implemen
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -72,7 +68,6 @@ class _$StimuliResponseCopyWithImpl<$Res, $Val extends StimuliResponse> implemen
 abstract class _$$StimuliResponseImplCopyWith<$Res> implements $StimuliResponseCopyWith<$Res> {
   factory _$$StimuliResponseImplCopyWith(_$StimuliResponseImpl value, $Res Function(_$StimuliResponseImpl) then) =
       __$$StimuliResponseImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({List<StimulusData>? stimulusList, String? error});
@@ -113,7 +108,6 @@ class _$StimuliResponseImpl extends _StimuliResponse {
   factory _$StimuliResponseImpl.fromJson(Map<String, dynamic> json) => _$$StimuliResponseImplFromJson(json);
 
   final List<StimulusData>? _stimulusList;
-
   @override
   List<StimulusData>? get stimulusList {
     final value = _stimulusList;
@@ -160,17 +154,14 @@ class _$StimuliResponseImpl extends _StimuliResponse {
 
 abstract class _StimuliResponse extends StimuliResponse {
   const factory _StimuliResponse({final List<StimulusData>? stimulusList, final String? error}) = _$StimuliResponseImpl;
-
   const _StimuliResponse._() : super._();
 
   factory _StimuliResponse.fromJson(Map<String, dynamic> json) = _$StimuliResponseImpl.fromJson;
 
   @override
   List<StimulusData>? get stimulusList;
-
   @override
   String? get error;
-
   @override
   @JsonKey(ignore: true)
   _$$StimuliResponseImplCopyWith<_$StimuliResponseImpl> get copyWith => throw _privateConstructorUsedError;
@@ -183,49 +174,28 @@ StimulusData _$StimulusDataFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$StimulusData {
   int? get id => throw _privateConstructorUsedError;
-
   String? get type => throw _privateConstructorUsedError;
-
   int? get value => throw _privateConstructorUsedError;
-
   DateTime? get sentAt => throw _privateConstructorUsedError;
-
   int? get sentBy => throw _privateConstructorUsedError;
-
   int? get sentTo => throw _privateConstructorUsedError;
-
   DateTime? get createdAt => throw _privateConstructorUsedError;
-
   DateTime? get updatedAt => throw _privateConstructorUsedError;
-
   String? get via => throw _privateConstructorUsedError;
-
   String? get message => throw _privateConstructorUsedError;
-
   DateTime? get pushedAt => throw _privateConstructorUsedError;
-
   DateTime? get failedAt => throw _privateConstructorUsedError;
-
   String? get failureMessage => throw _privateConstructorUsedError;
-
   int? get sentByApp => throw _privateConstructorUsedError;
-
   String? get reason => throw _privateConstructorUsedError;
-
   String? get pattern => throw _privateConstructorUsedError;
-
   int? get repeat => throw _privateConstructorUsedError;
-
   bool? get deleted => throw _privateConstructorUsedError;
-
   String? get userDate => throw _privateConstructorUsedError;
-
   bool? get recent => throw _privateConstructorUsedError;
-
   String? get meta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $StimulusDataCopyWith<StimulusData> get copyWith => throw _privateConstructorUsedError;
 }
@@ -234,7 +204,6 @@ mixin _$StimulusData {
 abstract class $StimulusDataCopyWith<$Res> {
   factory $StimulusDataCopyWith(StimulusData value, $Res Function(StimulusData) then) =
       _$StimulusDataCopyWithImpl<$Res, StimulusData>;
-
   @useResult
   $Res call(
       {int? id,
@@ -266,7 +235,6 @@ class _$StimulusDataCopyWithImpl<$Res, $Val extends StimulusData> implements $St
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -388,7 +356,6 @@ class _$StimulusDataCopyWithImpl<$Res, $Val extends StimulusData> implements $St
 abstract class _$$StimulusDataImplCopyWith<$Res> implements $StimulusDataCopyWith<$Res> {
   factory _$$StimulusDataImplCopyWith(_$StimulusDataImpl value, $Res Function(_$StimulusDataImpl) then) =
       __$$StimulusDataImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call(
@@ -704,74 +671,52 @@ abstract class _StimulusData extends StimulusData {
       final String? userDate,
       final bool? recent,
       final String? meta}) = _$StimulusDataImpl;
-
   const _StimulusData._() : super._();
 
   factory _StimulusData.fromJson(Map<String, dynamic> json) = _$StimulusDataImpl.fromJson;
 
   @override
   int? get id;
-
   @override
   String? get type;
-
   @override
   int? get value;
-
   @override
   DateTime? get sentAt;
-
   @override
   int? get sentBy;
-
   @override
   int? get sentTo;
-
   @override
   DateTime? get createdAt;
-
   @override
   DateTime? get updatedAt;
-
   @override
   String? get via;
-
   @override
   String? get message;
-
   @override
   DateTime? get pushedAt;
-
   @override
   DateTime? get failedAt;
-
   @override
   String? get failureMessage;
-
   @override
   int? get sentByApp;
-
   @override
   String? get reason;
-
   @override
   String? get pattern;
-
   @override
   int? get repeat;
-
   @override
   bool? get deleted;
-
   @override
   String? get userDate;
-
   @override
   bool? get recent;
-
   @override
   String? get meta;
-
   @override
   @JsonKey(ignore: true)
   _$$StimulusDataImplCopyWith<_$StimulusDataImpl> get copyWith => throw _privateConstructorUsedError;
@@ -786,7 +731,6 @@ mixin _$StimulusResponse {
   StimulusData? get stimulus => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $StimulusResponseCopyWith<StimulusResponse> get copyWith => throw _privateConstructorUsedError;
 }
@@ -795,7 +739,6 @@ mixin _$StimulusResponse {
 abstract class $StimulusResponseCopyWith<$Res> {
   factory $StimulusResponseCopyWith(StimulusResponse value, $Res Function(StimulusResponse) then) =
       _$StimulusResponseCopyWithImpl<$Res, StimulusResponse>;
-
   @useResult
   $Res call({StimulusData? stimulus});
 
@@ -808,7 +751,6 @@ class _$StimulusResponseCopyWithImpl<$Res, $Val extends StimulusResponse> implem
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -842,7 +784,6 @@ class _$StimulusResponseCopyWithImpl<$Res, $Val extends StimulusResponse> implem
 abstract class _$$StimulusResponseImplCopyWith<$Res> implements $StimulusResponseCopyWith<$Res> {
   factory _$$StimulusResponseImplCopyWith(_$StimulusResponseImpl value, $Res Function(_$StimulusResponseImpl) then) =
       __$$StimulusResponseImplCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call({StimulusData? stimulus});
@@ -914,14 +855,12 @@ class _$StimulusResponseImpl extends _StimulusResponse {
 
 abstract class _StimulusResponse extends StimulusResponse {
   const factory _StimulusResponse({final StimulusData? stimulus}) = _$StimulusResponseImpl;
-
   const _StimulusResponse._() : super._();
 
   factory _StimulusResponse.fromJson(Map<String, dynamic> json) = _$StimulusResponseImpl.fromJson;
 
   @override
   StimulusData? get stimulus;
-
   @override
   @JsonKey(ignore: true)
   _$$StimulusResponseImplCopyWith<_$StimulusResponseImpl> get copyWith => throw _privateConstructorUsedError;

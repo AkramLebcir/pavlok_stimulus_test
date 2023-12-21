@@ -284,6 +284,90 @@ abstract class Strings {
   /// In en, this message translates to:
   /// **'Forget your password?'**
   String get askForgetYourPassword;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'save'**
+  String get save;
+
+  /// No description provided for @timezone.
+  ///
+  /// In en, this message translates to:
+  /// **'Time zone'**
+  String get timezone;
+
+  /// No description provided for @anonymous.
+  ///
+  /// In en, this message translates to:
+  /// **'Anonymous'**
+  String get anonymous;
+
+  /// No description provided for @height.
+  ///
+  /// In en, this message translates to:
+  /// **'Height'**
+  String get height;
+
+  /// No description provided for @weight.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight'**
+  String get weight;
+
+  /// No description provided for @birthDay.
+  ///
+  /// In en, this message translates to:
+  /// **'BirthDay'**
+  String get birthDay;
+
+  /// No description provided for @lastName.
+  ///
+  /// In en, this message translates to:
+  /// **'Last Name'**
+  String get lastName;
+
+  /// No description provided for @firstName.
+  ///
+  /// In en, this message translates to:
+  /// **'First Name'**
+  String get firstName;
+
+  /// No description provided for @username.
+  ///
+  /// In en, this message translates to:
+  /// **'Username'**
+  String get username;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @selectYourHeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Select your height'**
+  String get selectYourHeight;
+
+  /// No description provided for @selectYourWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Select your weight'**
+  String get selectYourWeight;
+
+  /// No description provided for @selectYourBirthday.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your Birthday'**
+  String get selectYourBirthday;
 }
 
 class _StringsDelegate extends LocalizationsDelegate<Strings> {

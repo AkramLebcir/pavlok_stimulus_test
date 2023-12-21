@@ -7,4 +7,6 @@ class ListAPI {
 
   static const String stimulusSent = "/stimulus/sent/me";
   static const String stimulusSend = "/stimulus/send";
+
+  static const String user = "/user/";
 }

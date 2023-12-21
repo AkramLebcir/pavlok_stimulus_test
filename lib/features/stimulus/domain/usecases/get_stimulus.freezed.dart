@@ -35,7 +35,6 @@ class _$StimulusParamsCopyWithImpl<$Res, $Val extends StimulusParams> implements
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 }

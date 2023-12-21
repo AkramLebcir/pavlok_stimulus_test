@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => sl<SettingsCubit>()..getActiveTheme()),
         BlocProvider(create: (_) => sl<AuthCubit>()),
+        BlocProvider(create: (_) => sl<PikerCubit>()),
       ],
       child: OKToast(
         child: ScreenUtilInit(

@@ -99,4 +99,46 @@ class StringsEn extends Strings {
 
   @override
   String get askForgetYourPassword => 'Forget your password?';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get save => 'save';
+
+  @override
+  String get timezone => 'Time zone';
+
+  @override
+  String get anonymous => 'Anonymous';
+
+  @override
+  String get height => 'Height';
+
+  @override
+  String get weight => 'Weight';
+
+  @override
+  String get birthDay => 'BirthDay';
+
+  @override
+  String get lastName => 'Last Name';
+
+  @override
+  String get firstName => 'First Name';
+
+  @override
+  String get username => 'Username';
+
+  @override
+  String get done => 'Done';
+
+  @override
+  String get selectYourHeight => 'Select your height';
+
+  @override
+  String get selectYourWeight => 'Select your weight';
+
+  @override
+  String get selectYourBirthday => 'Set your Birthday';
 }

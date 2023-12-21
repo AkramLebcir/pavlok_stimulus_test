@@ -4,7 +4,6 @@ import 'package:pavlok_stimulus_test/features/stimulus/stimulus.dart';
 
 abstract class StimulusRemoteDatasource {
   Future<Either<Failure, StimuliResponse>> stimulus(StimulusParams stimulusParams);
-
   Future<Either<Failure, StimulusResponse>> postStimulus(PostStimulusParams postStimulusParams);
 }
 

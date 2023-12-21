@@ -30,5 +30,19 @@
   "selectType": "Choisissez le type",
   "selectValue": "Choisissez la valeur",
   "createStimulus": "Créer",
-  "askForgetYourPassword": "Mot de passe oublié?"
+  "askForgetYourPassword": "Mot de passe oublié?",
+  "profile": "Profil",
+  "save": "sauvegarder",
+  "timezone": "Fuseau horaire",
+  "anonymous": "Anonyme",
+  "height": "Hauteur",
+  "weight": "Poids",
+  "birthDay": "Anniversaire",
+  "lastName": "Nom de famille",
+  "firstName": "Prénom",
+  "username": "Nom d'utilisateur",
+  "done": "Fait",
+  "selectYourHeight": "Sélectionnez votre taille",
+  "selectYourWeight": "Sélectionnez votre poids",
+  "selectYourBirthday": "Définissez votre anniversaire"
 }
