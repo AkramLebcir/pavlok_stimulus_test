@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pavlok_stimulus_test/core/core.dart';
 import 'package:pavlok_stimulus_test/features/features.dart';
 

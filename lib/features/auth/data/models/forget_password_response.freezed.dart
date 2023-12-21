@@ -61,8 +61,8 @@ class _$ForgetPasswordResponseCopyWithImpl<$Res, $Val extends ForgetPasswordResp
 
 /// @nodoc
 abstract class _$$ForgetPasswordResponseImplCopyWith<$Res> implements $ForgetPasswordResponseCopyWith<$Res> {
-  factory _$$ForgetPasswordResponseImplCopyWith(
-          _$ForgetPasswordResponseImpl value, $Res Function(_$ForgetPasswordResponseImpl) then) =
+  factory _$$ForgetPasswordResponseImplCopyWith(_$ForgetPasswordResponseImpl value,
+      $Res Function(_$ForgetPasswordResponseImpl) then) =
       __$$ForgetPasswordResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -73,8 +73,8 @@ abstract class _$$ForgetPasswordResponseImplCopyWith<$Res> implements $ForgetPas
 class __$$ForgetPasswordResponseImplCopyWithImpl<$Res>
     extends _$ForgetPasswordResponseCopyWithImpl<$Res, _$ForgetPasswordResponseImpl>
     implements _$$ForgetPasswordResponseImplCopyWith<$Res> {
-  __$$ForgetPasswordResponseImplCopyWithImpl(
-      _$ForgetPasswordResponseImpl _value, $Res Function(_$ForgetPasswordResponseImpl) _then)
+  __$$ForgetPasswordResponseImplCopyWithImpl(_$ForgetPasswordResponseImpl _value,
+      $Res Function(_$ForgetPasswordResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
