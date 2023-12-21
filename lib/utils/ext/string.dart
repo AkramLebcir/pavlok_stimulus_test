@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oktoast/oktoast.dart';
 import 'package:pavlok_stimulus_test/core/core.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
+import 'package:oktoast/oktoast.dart';
 
 extension StringExtension on String {
   bool isValidEmail() {

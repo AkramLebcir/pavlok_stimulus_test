@@ -30,5 +30,19 @@
   "selectType": "Choose Type",
   "selectValue": "Choose Value",
   "createStimulus": "Create",
-  "askForgetYourPassword": "Forget your password?"
+  "askForgetYourPassword": "Forget your password?",
+  "profile": "Profile",
+  "save": "save",
+  "timezone": "Time zone",
+  "anonymous": "Anonymous",
+  "height": "Height",
+  "weight": "Weight",
+  "birthDay": "BirthDay",
+  "lastName": "Last Name",
+  "firstName": "First Name",
+  "username": "Username",
+  "done": "Done",
+  "selectYourHeight": "Select your height",
+  "selectYourWeight": "Select your weight",
+  "selectYourBirthday": "Set your Birthday"
 }

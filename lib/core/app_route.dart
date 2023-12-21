@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:pavlok_stimulus_test/dependencies_injection.dart';
 import 'package:pavlok_stimulus_test/features/features.dart';
 import 'package:pavlok_stimulus_test/utils/utils.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 enum Routes {
   root("/"),
@@ -12,6 +12,7 @@ enum Routes {
 
   /// Home Page
   dashboard("/dashboard"),
+  user("/user"),
   settings("/settings"),
 
   /// Auth Page
@@ -79,6 +80,14 @@ class AppRoute {
               child: const DashboardPage(),
             ),
           ),
+          // GoRoute(
+          //   path: Routes.user.path,
+          //   name: Routes.user.name,
+          //   builder: (_, __) => BlocProvider(
+          //     create: (context) => sl<UserCubit>(),
+          //     child: const UserPage(),
+          //   ),
+          // ),
           GoRoute(
             path: Routes.settings.path,
             name: Routes.settings.name,

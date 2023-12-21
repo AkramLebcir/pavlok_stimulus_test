@@ -31,6 +31,7 @@ class Dimens {
   static double space40 = 40.w;
   static double space46 = 46.w;
   static double space50 = 50.w;
+  static double space100 = 100.w;
 
   static double selectedIndicatorW = 43.w;
   static double selectedIndicatorSmallW = 28.w;

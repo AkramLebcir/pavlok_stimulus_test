@@ -21,3 +21,34 @@ IconData getIcon(String type) {
       return Icons.vibration;
   }
 }
+
+/// Height
+List<Text> getListHeightCm1() {
+  return List.generate(121, (index) => 100 + index).map((e) => Text(e.toString())).toList();
+}
+
+List<Text> getListHeightFtIn1() {
+  return List.generate(5, (index) => 4 + index).map((e) => Text("$e'")).toList();
+}
+
+List<Text> getListHeightCm2() {
+  return List.generate(11, (index) => 0 + index).map((e) => Text('.${e.toString()}')).toList();
+}
+
+List<Text> getListHeightFtIn2() {
+  return List.generate(12, (index) => 0 + index).map((e) => Text('${e.toString()}"')).toList();
+}
+
+/// Weight
+
+List<Text> getListWeightKg() {
+  return List.generate(151, (index) => 30 + index).map((e) => Text(e.toString())).toList();
+}
+
+List<Text> getListWeightLb1() {
+  return List.generate(396, (index) => 65 + index).map((e) => Text(e.toString())).toList();
+}
+
+List<Text> getListWeight2() {
+  return List.generate(11, (index) => 0 + index).map((e) => Text('.${e.toString()}')).toList();
+}

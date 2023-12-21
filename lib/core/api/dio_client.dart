@@ -131,4 +131,40 @@ class DioClient with MainBoxMixin {
       );
     }
   }
+
+  Future<Either<Failure, T>> putRequest<T>(
+    String url, {
+    Map<String, dynamic>? data,
+    required ResponseConverter<T> converter,
+    bool isIsolate = true,
+  }) async {
+    try {
+      final response = await dio.put(url, data: data);
+      if ((response.statusCode ?? 0) < 200 || (response.statusCode ?? 0) > 201) {
+        throw DioException(
+          requestOptions: response.requestOptions,
+          response: response,
+        );
+      }
+
+      if (!isIsolate) {
+        return Right(converter(response.data));
+      }
+      final isolateParse = IsolateParser<T>(
+        response.data as Map<String, dynamic>,
+        converter,
+      );
+      final result = await isolateParse.parseInBackground();
+      return Right(result);
+    } on DioException catch (e, stackTrace) {
+      if (!_isUnitTest) {
+        log.e("error ", error: e, stackTrace: stackTrace);
+      }
+      return Left(
+        ServerFailure(
+          e.response?.data['error'] as String? ?? e.message,
+        ),
+      );
+    }
+  }
 }
