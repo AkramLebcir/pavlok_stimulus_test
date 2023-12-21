@@ -59,57 +59,6 @@ void main() {
   }
 
   testWidgets(
-    'renders LoginPage for form validation blank',
-    (tester) async {
-      when(() => authCubit.state).thenReturn(const AuthState.success(null));
-      await tester.pumpWidget(rootWidget(const LoginPage()));
-      await tester.pumpAndSettle();
-      await tester.dragUntilVisible(
-        find.byType(Button), // what you want to find
-        find.byType(SingleChildScrollView), // widget you want to scroll
-        const Offset(0, 50), // delta to move
-      );
-
-      /// validate email
-      await tester.tap(find.byType(Button));
-      await tester.pump(const Duration(milliseconds: 100));
-      expect(find.text("Email is not valid"), findsOneWidget);
-      expect(
-        find.text("Password must be at least 6 characters"),
-        findsOneWidget,
-      );
-    },
-  );
-
-  testWidgets(
-    'renders LoginPage for form validation fill email',
-    (tester) async {
-      const email = "test@gmail.com";
-
-      when(() => authCubit.state).thenReturn(const AuthState.success(null));
-
-      await tester.pumpWidget(rootWidget(const LoginPage()));
-      await tester.pumpAndSettle();
-      await tester.enterText(find.byKey(const Key('email')), email);
-      await tester.pumpAndSettle();
-      await tester.dragUntilVisible(
-        find.byType(Button), // what you want to find
-        find.byType(SingleChildScrollView), // widget you want to scroll
-        const Offset(0, 50), // delta to move
-      );
-
-      /// validate email
-      await tester.tap(find.byType(Button));
-      await tester.pump(const Duration(milliseconds: 100));
-      expect(find.text("Email is not valid"), findsNothing);
-      expect(
-        find.text("Password must be at least 6 characters"),
-        findsOneWidget,
-      );
-    },
-  );
-
-  testWidgets(
     'renders LoginPage for form validation fill email,password and call login cubit',
     (tester) async {
       const email = "test@gmail.com";

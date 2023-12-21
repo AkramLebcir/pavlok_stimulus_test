@@ -31,7 +31,7 @@ class AuthCubit extends Cubit<AuthState> with MainBoxMixin {
         }
       },
       (r) {
-        addData<String>(MainBoxKeys.email, params.email);
+        addData(MainBoxKeys.email, params.email);
         return emit(_Success(r.token));
       },
     );
